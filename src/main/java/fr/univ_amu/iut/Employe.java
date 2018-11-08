@@ -1,4 +1,4 @@
-package fr.univ_amu.iut.exo1;
+package fr.univ_amu.iut;
 import java.time.LocalDate;
 
 public class Employe {
@@ -11,6 +11,7 @@ public class Employe {
     private LocalDate dateEmbaucheEmploye;
     private double base;
     private double nbrHeure;
+    private double salaireBrut;
     private double salaireNet;
 
 
@@ -24,7 +25,11 @@ public class Employe {
         this.dateEmbaucheEmploye = dateEmbaucheEmploye;
         this.base = base;
         this.nbrHeure = nbrHeure;
-        this.salaireNet = this.base * this.nbrHeure;
+        this.salaireBrut = this.base * this.nbrHeure;
+    }
+
+    public void setSalaireBrut(double salaireBrut) {
+        this.salaireBrut = salaireBrut;
     }
 
     @Override
@@ -39,6 +44,7 @@ public class Employe {
                 ", dateEmbaucheEmploye=" + dateEmbaucheEmploye +
                 ", tauxHoraire=" + base +
                 ", nbrHeure=" + nbrHeure +
+                ", salaireBrut" + salaireBrut +
                 ", salaireNet" + salaireNet +
                 '}' + "\n";
     }

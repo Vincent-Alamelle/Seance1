@@ -1,4 +1,7 @@
 package fr.univ_amu.iut.exo1;
+import fr.univ_amu.iut.Employe;
+import fr.univ_amu.iut.Entreprise;
+
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
