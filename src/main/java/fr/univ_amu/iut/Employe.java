@@ -26,6 +26,7 @@ public class Employe {
         this.base = base;
         this.nbrHeure = nbrHeure;
         this.salaireBrut = this.base * this.nbrHeure;
+        this.salaireNet = this.salaireBrut * 0.8;
     }
 
     public void setSalaireBrut(double salaireBrut) {
@@ -44,8 +45,8 @@ public class Employe {
                 ", dateEmbaucheEmploye=" + dateEmbaucheEmploye +
                 ", tauxHoraire=" + base +
                 ", nbrHeure=" + nbrHeure +
-                ", salaireBrut" + salaireBrut +
-                ", salaireNet" + salaireNet +
+                ", salaireBrut=" + salaireBrut +
+                ", salaireNet=" + salaireNet +
                 '}' + "\n";
     }
 }
