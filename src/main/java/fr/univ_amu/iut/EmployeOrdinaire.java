@@ -7,7 +7,7 @@ public class EmployeOrdinaire extends Employe {
     public EmployeOrdinaire(int numEmploye, String numSecu, String nomEmploye, String prenomEmploye, int echelonEmploye, LocalDate dateNaissanceEmploye, LocalDate dateEmbaucheEmploye, double base, double nbrHeure) {
         super(numEmploye, numSecu, nomEmploye, prenomEmploye, echelonEmploye, dateNaissanceEmploye, dateEmbaucheEmploye, base, nbrHeure);
 
-        this.setSalaireBrut(base * nbrHeure + echelonEmploye * 100);
+        super.setSalaireBrut(base * nbrHeure + echelonEmploye * 100);
     }
 
     public void effectuerTacheOrdinaire()

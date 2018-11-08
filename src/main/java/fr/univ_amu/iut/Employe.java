@@ -25,12 +25,21 @@ public class Employe {
         this.dateEmbaucheEmploye = dateEmbaucheEmploye;
         this.base = base;
         this.nbrHeure = nbrHeure;
-        this.salaireBrut = this.base * this.nbrHeure;
-        this.salaireNet = this.salaireBrut * 0.8;
+        setSalaireBrut(this.base * this.nbrHeure);
+        setSalaireNet(this.salaireBrut * 0.8);
     }
 
     public void setSalaireBrut(double salaireBrut) {
-        this.salaireBrut = salaireBrut;
+        this.salaireBrut = salaireBrut + 100;
+        setSalaireNet(this.salaireBrut * 0.8);
+    }
+
+    public void setSalaireNet(double salaireNet) {
+        this.salaireNet = salaireNet;
+    }
+
+    public double getSalaireBrut() {
+        return salaireBrut;
     }
 
     @Override
@@ -43,8 +52,8 @@ public class Employe {
                 ", echelonEmploye=" + echelonEmploye +
                 ", dateNaissanceEmploye=" + dateNaissanceEmploye +
                 ", dateEmbaucheEmploye=" + dateEmbaucheEmploye +
-                ", tauxHoraire=" + base +
                 ", nbrHeure=" + nbrHeure +
+                ", base=" + base +
                 ", salaireBrut=" + salaireBrut +
                 ", salaireNet=" + salaireNet +
                 '}' + "\n";
